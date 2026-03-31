@@ -4,50 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Collection — Élixir Du Lin</title>
-  <meta name="description" content="Six luxury-inspired dryer sheet fragrances. Woody, floral, fresh, and oriental compositions crafted for discerning laundry." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav>
-    <a href="index.html" class="nav-logo">
-      <svg class="logo-svg" viewBox="0 0 188 66" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1.5" y="1.5" width="185" height="63" fill="none" stroke="#C41230" stroke-width="0.7" opacity="0.6"/>
-        <line x1="1.5" y1="1.5" x2="12" y2="1.5" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="1.5" y1="1.5" x2="1.5" y2="12" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="186.5" y1="1.5" x2="176" y2="1.5" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="186.5" y1="1.5" x2="186.5" y2="12" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="1.5" y1="64.5" x2="12" y2="64.5" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="1.5" y1="64.5" x2="1.5" y2="54" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="186.5" y1="64.5" x2="176" y2="64.5" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="186.5" y1="64.5" x2="186.5" y2="54" stroke="#C41230" stroke-width="1.4"/>
-        <text font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="52" fill="#C41230" x="16" y="51">ÉDL</text>
-      </svg>
-    </a>
-
+    <a href="index.html" class="nav-wordmark">Élixir Du Lin</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Collection</a></li>
+      <li><a href="shop.html" class="active">Collection</a></li>
       <li><a href="index.html#about">About</a></li>
     </ul>
-
     <div class="nav-right">
-      <a href="cart.html" class="cart-icon" aria-label="Cart">
+      <a href="cart.html" class="cart-icon">
         <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         <span class="cart-count">0</span>
       </a>
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
   <div class="page-hero">
-    <p class="hero-eyebrow">Élixir Du Lin</p>
+    <span class="label">Élixir Du Lin</span>
     <h1>The Collection</h1>
-    <p>Six compositions. Drawn from the language of fine perfumery, translated into your everyday ritual.</p>
+    <p>Six compositions drawn from the language of fine perfumery, translated into your everyday ritual.</p>
   </div>
 
-  <!-- FILTERS -->
   <div class="shop-filters">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="fresh">Fresh &amp; Citrus</button>
@@ -56,28 +37,15 @@
     <button class="filter-btn" data-filter="oriental">Oriental</button>
   </div>
 
-  <!-- PRODUCT GRID -->
   <div class="shop-grid-section">
     <div class="shop-grid"></div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <svg viewBox="0 0 188 66" xmlns="http://www.w3.org/2000/svg" width="120">
-          <rect x="1.5" y="1.5" width="185" height="63" fill="none" stroke="#C41230" stroke-width="0.7" opacity="0.5"/>
-          <line x1="1.5" y1="1.5" x2="10" y2="1.5" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="1.5" y1="1.5" x2="1.5" y2="10" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="186.5" y1="1.5" x2="178" y2="1.5" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="186.5" y1="1.5" x2="186.5" y2="10" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="1.5" y1="64.5" x2="10" y2="64.5" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="1.5" y1="64.5" x2="1.5" y2="56" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="186.5" y1="64.5" x2="178" y2="64.5" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="186.5" y1="64.5" x2="186.5" y2="56" stroke="#C41230" stroke-width="1.2"/>
-          <text font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="52" fill="#C41230" x="16" y="51">ÉDL</text>
-        </svg>
-        <p>Luxury-inspired dryer sheets crafted for those who believe every detail matters.</p>
+        <span class="footer-brand-name">Élixir Du Lin</span>
+        <p>Luxury-inspired dryer sheets for those who believe every detail matters.</p>
       </div>
       <div class="footer-col">
         <h4>Collection</h4>
@@ -100,10 +68,10 @@
       <div class="footer-col">
         <h4>Support</h4>
         <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Shipping</a></li>
           <li><a href="#">Returns</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Privacy</a></li>
         </ul>
       </div>
     </div>

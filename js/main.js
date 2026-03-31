@@ -188,22 +188,21 @@ function initNav() {
 // ========================
 // PRODUCT CARD HTML
 // ========================
-function productCardHTML(p, linkPrefix = '') {
+function productCardHTML(p) {
   return `
-    <a href="${linkPrefix}product.html?id=${p.id}" class="product-card">
-      <div class="product-img">
-        <div class="product-img-inner">
-          <span class="placeholder-monogram">${p.monogram}</span>
-          <span class="placeholder-scent">${p.scent}</span>
+    <a href="product.html?id=${p.id}" class="product-card">
+      <div class="card-img">
+        <div class="card-img-inner">
+          <span class="card-mono">${p.monogram}</span>
+          <span class="card-scent-type">${p.scent}</span>
         </div>
-        <div class="product-img-overlay"></div>
       </div>
-      <div class="product-info">
-        <div class="product-name">${p.name}</div>
-        <div class="product-tagline">${p.tagline}</div>
-        <div class="product-meta">
-          <span class="product-price">$${p.price.toFixed(2)}</span>
-          <span class="product-sheets">${p.sheets} Sheets</span>
+      <div class="card-info">
+        <div class="card-name">${p.name}</div>
+        <div class="card-tagline">${p.tagline}</div>
+        <div class="card-bottom">
+          <span class="card-price">$${p.price.toFixed(2)}</span>
+          <span class="card-sheets">${p.sheets} Sheets</span>
         </div>
       </div>
     </a>
@@ -267,7 +266,7 @@ function initProduct() {
   setEl('.pd-name', p.name);
   setEl('.pd-tagline', p.tagline);
   setEl('.pd-price', `$${p.price.toFixed(2)}`);
-  setEl('.pd-sheets', `${p.sheets} sheets per box`);
+  setEl('.pd-per-box', `${p.sheets} sheets per box`);
   setEl('.pd-description', p.description);
   setEl('.pd-monogram', p.monogram);
   setEl('.pd-scent', p.scent);
@@ -390,6 +389,22 @@ function initCart() {
 }
 
 // ========================
+// SCROLL REVEAL
+// ========================
+function initReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ========================
 // INIT
 // ========================
 document.addEventListener('DOMContentLoaded', () => {
@@ -398,4 +413,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initShop();
   initProduct();
   initCart();
+  initReveal();
 });

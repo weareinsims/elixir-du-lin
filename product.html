@@ -4,85 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product — Élixir Du Lin</title>
-  <meta name="description" content="Luxury dryer sheets by Élixir Du Lin." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav>
-    <a href="index.html" class="nav-logo">
-      <svg class="logo-svg" viewBox="0 0 188 66" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1.5" y="1.5" width="185" height="63" fill="none" stroke="#C41230" stroke-width="0.7" opacity="0.6"/>
-        <line x1="1.5" y1="1.5" x2="12" y2="1.5" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="1.5" y1="1.5" x2="1.5" y2="12" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="186.5" y1="1.5" x2="176" y2="1.5" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="186.5" y1="1.5" x2="186.5" y2="12" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="1.5" y1="64.5" x2="12" y2="64.5" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="1.5" y1="64.5" x2="1.5" y2="54" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="186.5" y1="64.5" x2="176" y2="64.5" stroke="#C41230" stroke-width="1.4"/>
-        <line x1="186.5" y1="64.5" x2="186.5" y2="54" stroke="#C41230" stroke-width="1.4"/>
-        <text font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="52" fill="#C41230" x="16" y="51">ÉDL</text>
-      </svg>
-    </a>
-
+    <a href="index.html" class="nav-wordmark">Élixir Du Lin</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Collection</a></li>
+      <li><a href="shop.html" class="active">Collection</a></li>
       <li><a href="index.html#about">About</a></li>
     </ul>
-
     <div class="nav-right">
-      <a href="cart.html" class="cart-icon" aria-label="Cart">
+      <a href="cart.html" class="cart-icon">
         <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         <span class="cart-count">0</span>
       </a>
     </div>
   </nav>
 
-  <!-- PRODUCT DETAIL -->
   <div class="product-page">
     <div class="product-layout">
 
-      <!-- GALLERY -->
       <div class="product-gallery">
-        <span class="gallery-bg-monogram pd-monogram"></span>
-        <div class="gallery-center">
-          <div class="product-name pd-name" style="font-size:2rem;opacity:0.2;color:var(--gold);font-family:'Cormorant Garamond',serif;"></div>
-        </div>
+        <span class="gallery-bg-mono pd-monogram"></span>
+        <span class="gallery-name pd-name"></span>
       </div>
 
-      <!-- DETAILS -->
       <div class="product-detail">
-        <p class="hero-eyebrow pd-tagline"></p>
-        <h1 class="product-name pd-name"></h1>
+        <span class="label pd-tagline"></span>
+        <h1 class="pd-name"></h1>
 
-        <div class="detail-divider"></div>
+        <span class="pd-price"></span>
+        <span class="pd-per-box"></span>
 
-        <span class="product-price pd-price"></span>
-        <span class="per-box pd-sheets"></span>
+        <p class="pd-description"></p>
 
-        <p class="product-description pd-description"></p>
-
-        <div class="scent-notes">
-          <span class="scent-notes-label">Fragrance Notes</span>
-          <div class="notes-grid">
-            <div class="note-item">
-              <span class="note-type">Top</span>
-              <span class="note-value pd-note-top"></span>
-            </div>
-            <div class="note-item">
-              <span class="note-type">Heart</span>
-              <span class="note-value pd-note-heart"></span>
-            </div>
-            <div class="note-item">
-              <span class="note-type">Base</span>
-              <span class="note-value pd-note-base"></span>
-            </div>
+        <span class="notes-label">Fragrance Notes</span>
+        <div class="notes-grid">
+          <div class="note-item">
+            <span class="note-type">Top</span>
+            <span class="note-val pd-note-top"></span>
+          </div>
+          <div class="note-item">
+            <span class="note-type">Heart</span>
+            <span class="note-val pd-note-heart"></span>
+          </div>
+          <div class="note-item">
+            <span class="note-type">Base</span>
+            <span class="note-val pd-note-base"></span>
           </div>
         </div>
 
-        <div class="detail-divider"></div>
+        <div class="divider"></div>
 
         <div class="qty-row">
           <span class="qty-label">Quantity</span>
@@ -93,11 +67,8 @@
           </div>
         </div>
 
-        <button class="add-to-cart-btn">
-          <span>Add to Cart</span>
-        </button>
-
-        <p style="font-size:0.6rem;letter-spacing:0.12em;color:var(--muted-2);text-align:center;margin-top:0.5rem;">
+        <button class="btn-block add-to-cart-btn"><span>Add to Cart</span></button>
+        <p style="font-size:0.56rem;letter-spacing:0.12em;color:var(--dim);text-align:center;margin-top:0.75rem;">
           Free shipping on orders over $75
         </p>
       </div>
@@ -105,32 +76,19 @@
     </div>
   </div>
 
-  <!-- RELATED PRODUCTS -->
   <section class="related-section">
     <div class="section-header">
-      <span class="section-eyebrow">Continue Exploring</span>
-      <h2 class="section-title">You May Also Like</h2>
+      <span class="label" style="text-align:center;display:block;">Continue Exploring</span>
+      <h2 class="section-title" style="text-align:center;">You May Also Like</h2>
     </div>
     <div class="related-grid products-grid"></div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
-        <svg viewBox="0 0 188 66" xmlns="http://www.w3.org/2000/svg" width="120">
-          <rect x="1.5" y="1.5" width="185" height="63" fill="none" stroke="#C41230" stroke-width="0.7" opacity="0.5"/>
-          <line x1="1.5" y1="1.5" x2="10" y2="1.5" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="1.5" y1="1.5" x2="1.5" y2="10" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="186.5" y1="1.5" x2="178" y2="1.5" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="186.5" y1="1.5" x2="186.5" y2="10" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="1.5" y1="64.5" x2="10" y2="64.5" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="1.5" y1="64.5" x2="1.5" y2="56" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="186.5" y1="64.5" x2="178" y2="64.5" stroke="#C41230" stroke-width="1.2"/>
-          <line x1="186.5" y1="64.5" x2="186.5" y2="56" stroke="#C41230" stroke-width="1.2"/>
-          <text font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="52" fill="#C41230" x="16" y="51">ÉDL</text>
-        </svg>
-        <p>Luxury-inspired dryer sheets crafted for those who believe every detail matters.</p>
+        <span class="footer-brand-name">Élixir Du Lin</span>
+        <p>Luxury-inspired dryer sheets for those who believe every detail matters.</p>
       </div>
       <div class="footer-col">
         <h4>Collection</h4>
@@ -153,10 +111,10 @@
       <div class="footer-col">
         <h4>Support</h4>
         <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Shipping</a></li>
           <li><a href="#">Returns</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Privacy</a></li>
         </ul>
       </div>
     </div>
