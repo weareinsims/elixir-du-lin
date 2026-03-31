@@ -188,13 +188,6 @@ nav.scrolled {
   pointer-events: none;
 }
 
-.hero-emblem {
-  width: clamp(120px, 18vw, 190px);
-  height: auto;
-  margin-bottom: 3.5rem;
-  opacity: 0.92;
-}
-
 .hero-eyebrow {
   font-size: 0.58rem;
   letter-spacing: 0.5em;
