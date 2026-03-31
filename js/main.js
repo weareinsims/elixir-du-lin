@@ -248,6 +248,7 @@ function initShop() {
 // PRODUCT PAGE
 // ========================
 function initProduct() {
+  if (!document.querySelector('.product-layout')) return;
   const params = new URLSearchParams(location.search);
   const id = parseInt(params.get('id'));
   const p = PRODUCTS.find(pr => pr.id === id);
