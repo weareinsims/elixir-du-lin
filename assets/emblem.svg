@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Top arc: counterclockwise left to right = traces over the top -->
+    <path id="top-arc"    d="M 30,140 A 110,110 0 0,1 250,140"/>
+    <!-- Bottom arc: clockwise left to right = traces under the bottom, side=right flips text -->
+    <path id="bottom-arc" d="M 30,140 A 110,110 0 0,0 250,140"/>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="140" cy="140" r="133" fill="none" stroke="#A50021" stroke-width="0.85"/>
+  <!-- Inner ring -->
+  <circle cx="140" cy="140" r="125" fill="none" stroke="#A50021" stroke-width="0.4"/>
+
+  <!-- Stars at cardinal points, sitting between the two rings -->
+  <text font-family="Georgia, serif" font-size="9" fill="#A50021" text-anchor="middle" x="140" y="15">✦</text>
+  <text font-family="Georgia, serif" font-size="9" fill="#A50021" text-anchor="middle" x="268" y="144">✦</text>
+  <text font-family="Georgia, serif" font-size="9" fill="#A50021" text-anchor="middle" x="12"  y="144">✦</text>
+  <text font-family="Georgia, serif" font-size="9" fill="#A50021" text-anchor="middle" x="140" y="270">✦</text>
+
+  <!-- Top curved text -->
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="11.5" fill="#A50021" font-weight="600" letter-spacing="4">
+    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">ÉLIXIR DU LIN</textPath>
+  </text>
+
+  <!-- Bottom curved text (side=right renders text on outside of arc) -->
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#A50021" font-weight="500" letter-spacing="3">
+    <textPath href="#bottom-arc" side="right" startOffset="50%" text-anchor="middle">MAISON DE PARFUM</textPath>
+  </text>
+
+  <!-- ÉDL Monogram -->
+  <text
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-weight="700"
+    font-size="84"
+    fill="#A50021"
+    text-anchor="middle"
+    x="140"
+    y="160"
+    letter-spacing="-5"
+  >ÉDL</text>
+
+  <!-- Decorative rule + star below monogram -->
+  <line x1="62"  y1="176" x2="112" y2="176" stroke="#A50021" stroke-width="0.55"/>
+  <text font-family="Georgia, serif" font-size="7" fill="#A50021" text-anchor="middle" x="140" y="180">✦</text>
+  <line x1="168" y1="176" x2="218" y2="176" stroke="#A50021" stroke-width="0.55"/>
+</svg>
