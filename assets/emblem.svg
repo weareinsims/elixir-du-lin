@@ -1,47 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Top arc: counterclockwise left to right = traces over the top -->
-    <path id="top-arc"    d="M 30,140 A 110,110 0 0,1 250,140"/>
-    <!-- Bottom arc: clockwise left to right = traces under the bottom, side=right flips text -->
-    <path id="bottom-arc" d="M 30,140 A 110,110 0 0,0 250,140"/>
+    <radialGradient id="edl-sg" cx="42%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#C8001F"/>
+      <stop offset="52%" stop-color="#8B0018"/>
+      <stop offset="100%" stop-color="#440010"/>
+    </radialGradient>
+    <path id="edl-ba" d="M 36.8,136.5 A 73,73 0 0,1 163.2,136.5"/>
   </defs>
 
-  <!-- Outer ring -->
-  <circle cx="140" cy="140" r="133" fill="none" stroke="#A50021" stroke-width="0.85"/>
-  <!-- Inner ring -->
-  <circle cx="140" cy="140" r="125" fill="none" stroke="#A50021" stroke-width="0.4"/>
+  <!-- Seal body -->
+  <circle cx="100" cy="100" r="97" fill="url(#edl-sg)"/>
 
-  <!-- Stars at cardinal points, sitting between the two rings -->
-  <text font-family="Georgia, serif" font-size="9" fill="#A50021" text-anchor="middle" x="140" y="15">✦</text>
-  <text font-family="Georgia, serif" font-size="9" fill="#A50021" text-anchor="middle" x="268" y="144">✦</text>
-  <text font-family="Georgia, serif" font-size="9" fill="#A50021" text-anchor="middle" x="12"  y="144">✦</text>
-  <text font-family="Georgia, serif" font-size="9" fill="#A50021" text-anchor="middle" x="140" y="270">✦</text>
+  <!-- Outer rings -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#C0002A" stroke-width="2"/>
+  <circle cx="100" cy="100" r="89" fill="none" stroke="#8B0018" stroke-width="0.7"/>
 
-  <!-- Top curved text -->
-  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="11.5" fill="#A50021" font-weight="600" letter-spacing="4">
-    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">ÉLIXIR DU LIN</textPath>
+  <!-- Inner rings -->
+  <circle cx="100" cy="100" r="73" fill="none" stroke="#C0002A" stroke-width="1.2"/>
+  <circle cx="100" cy="100" r="69" fill="none" stroke="#7A0018" stroke-width="0.5"/>
+
+  <!-- Crown -->
+  <g fill="#F0E8D5">
+    <path d="M 83,46 L 83,35 L 87.5,38 L 91.5,27 L 95.5,34 L 100,22 L 104.5,34 L 108.5,27 L 112.5,38 L 117,35 L 117,46 Z"/>
+    <rect x="82" y="44" width="36" height="4" rx="0.8"/>
+    <circle cx="100" cy="21" r="2.5"/>
+    <circle cx="91.5" cy="26" r="1.8"/>
+    <circle cx="108.5" cy="26" r="1.8"/>
+    <circle cx="83" cy="34" r="1.3"/>
+    <circle cx="117" cy="34" r="1.3"/>
+  </g>
+
+  <!-- Left scrollwork -->
+  <g stroke="#D43050" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M 29,84 C 24,91 23,100 26,109 C 29,116 27,123 23,128"/>
+    <path d="M 33,91 C 28,97 27,103 30,109"/>
+    <circle cx="27" cy="83" r="2.5" fill="#D43050" fill-opacity="0.5" stroke="none"/>
+    <circle cx="22" cy="129" r="1.8" fill="#D43050" fill-opacity="0.5" stroke="none"/>
+  </g>
+
+  <!-- Right scrollwork -->
+  <g stroke="#D43050" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M 171,84 C 176,91 177,100 174,109 C 171,116 173,123 177,128"/>
+    <path d="M 167,91 C 172,97 173,103 170,109"/>
+    <circle cx="173" cy="83" r="2.5" fill="#D43050" fill-opacity="0.5" stroke="none"/>
+    <circle cx="178" cy="129" r="1.8" fill="#D43050" fill-opacity="0.5" stroke="none"/>
+  </g>
+
+  <!-- ÉDL monogram -->
+  <text font-family="Cormorant Garamond, Georgia, serif"
+        font-style="italic"
+        font-weight="600"
+        font-size="58"
+        fill="#F8F5F0"
+        text-anchor="middle"
+        x="100" y="120"
+        letter-spacing="-1">ÉDL</text>
+
+  <!-- Decorative lines flanking monogram -->
+  <line x1="38" y1="98" x2="66" y2="98" stroke="#C0002A" stroke-width="0.8" opacity="0.8"/>
+  <line x1="134" y1="98" x2="162" y2="98" stroke="#C0002A" stroke-width="0.8" opacity="0.8"/>
+  <path d="M 100,94 L 102.5,97 L 100,100 L 97.5,97 Z" fill="#C0002A" opacity="0.9"/>
+
+  <!-- Fleur-de-lis -->
+  <g transform="translate(100,168)" fill="#F0E8D5">
+    <path d="M 0,-13 C -4.5,-9 -4.5,-3.5 0,0 C 4.5,-3.5 4.5,-9 0,-13 Z"/>
+    <path d="M -0.5,-1 C -5.5,-5 -11,-2.5 -10,3.5 C -9,6.5 -4.5,3.5 -0.5,0 Z"/>
+    <path d="M 0.5,-1 C 5.5,-5 11,-2.5 10,3.5 C 9,6.5 4.5,3.5 0.5,0 Z"/>
+    <path d="M 0,0 C -2.5,4 -2.5,9 0,12.5 C 2.5,9 2.5,4 0,0 Z"/>
+    <rect x="-5.5" y="-2" width="11" height="3.5" rx="1.2"/>
+  </g>
+
+  <!-- Bottom circular text -->
+  <text font-family="Montserrat, sans-serif" font-size="7.5"
+        fill="#F0E8D5" fill-opacity="0.65" letter-spacing="2.5"
+        text-anchor="middle">
+    <textPath href="#edl-ba" startOffset="50%">MAISON DE PARFUM DU LINGE</textPath>
   </text>
-
-  <!-- Bottom curved text (side=right renders text on outside of arc) -->
-  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#A50021" font-weight="500" letter-spacing="3">
-    <textPath href="#bottom-arc" side="right" startOffset="50%" text-anchor="middle">MAISON DE PARFUM</textPath>
-  </text>
-
-  <!-- ÉDL Monogram -->
-  <text
-    font-family="'Cormorant Garamond', Georgia, serif"
-    font-weight="700"
-    font-size="84"
-    fill="#A50021"
-    text-anchor="middle"
-    x="140"
-    y="160"
-    letter-spacing="-5"
-  >ÉDL</text>
-
-  <!-- Decorative rule + star below monogram -->
-  <line x1="62"  y1="176" x2="112" y2="176" stroke="#A50021" stroke-width="0.55"/>
-  <text font-family="Georgia, serif" font-size="7" fill="#A50021" text-anchor="middle" x="140" y="180">✦</text>
-  <line x1="168" y1="176" x2="218" y2="176" stroke="#A50021" stroke-width="0.55"/>
 </svg>
